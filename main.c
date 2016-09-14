@@ -55,6 +55,8 @@ int main()
 
     char userString[MAXLENGTH];
 
+    char inputedStrings[t];
+
     for(int i = 0; i < t; i++)
     {
         scanf("%s", userString);
