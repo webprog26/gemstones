@@ -50,7 +50,7 @@ int _strlen(char* s)
 int main()
 {
     //test array size
-    int t = 3;
+    int t = 100;
 
     //for production version
     /*
@@ -73,12 +73,113 @@ int main()
     char* s1 = "baccd";
     char* s2 = "eeabg";
 
-    char inputedStrings[t][MAXLENGTH];
+    char inputedStrings[][MAXLENGTH] = {
+    "mhydccqrbddfyfoehmkfrbwebcassnqbydblcwrdbnaphlljqolegyxsprmgerjxxckkaxrkmqzdwawpbopdoikhlcof",
+    "lttkjeerkhadffxqmfokcwdoicbxpydimobpcnkhzjcgpdigxanczxqw",
+    "mgseqfwduoddcbaautnebrlcbup",
+    "mbucihazqpoylmfiiturlclabwydqeegdajcmuhrodmfuaeuminwieekuihyuitlnjymjtyxzgokxaubeuovhsdyv",
+    "jadbjfecdxujcv",
+    "nbabvhbcycofyxfjyjlesivgktipqgppxrpehedsqyexgnizvfzuotsehtzecmysrdkkdlzexfbfesi",
+    "tfnvcmdhucpkmivexfugcldoizvdzvwsarwrdzponwuqpfscubxgyyebbfcruykjnylwafwesgnepmpzslnwfoivqltfodujrdxq",
+    "rcrbfgfifnkyfbecprqdseiraxn",
+    "jsevbvdpbikuxwpfkecvbpdqnankobafidnqtemjogerwejxcymqklademjzrzsfmfaocsxtnxplhog",
+    "fdsvnuaecebb",
+    "xjnlbbivqdjbnfpxlgzcdasqkvmgkecccztvzegivhgphxofvcvslotpdae",
+    "znkdufrahjhczdfgfebxybwerjxfjcihvxnyynqppirlhxccaopcahmpxjbrhwcludujvdefsircxzdfkulaq",
+    "ngccvzyrzzvafzrqcvenitmcvdgtczaakatqcubdqnpyjfyzdjacamircjnmxadusrwlbufsldsxwqcpebk",
+    "xlxjqndenptvbgdotomcayasfzwb",
+    "himsttquvmfqwfngixssaynrcbeojlbcvddsmlpkppogbugwcjjsubtjyjstwhbwdodnaevauetoaswsonfewyfqstdqdxygbh",
+    "sniwtrllzearkesrdnkflewhpffqsuvljcflqfskmipqxijasbodgzyikgtvsyzbhcqtxqfocjkxiexmdqqsscybegdzc",
+    "ecimqpxcxysbqnimtkqzoaehxfxaivvxnlmnqfpborbqdjviasborjhvymjoefgm",
+    "grrrmvepgfdlrueukgfcbpcbtcamauuklqseltwotpdapx",
+    "prxlpvqagzevfifbrcnurhftqabwptwwwjdjeptbwyfudcqdoycefmopaslqexndae",
+    "ugbjakqvgcxtowsaxnjncekucilbmaimecltfafunvzbujbdigjpacfcmmutq",
+    "zlhdtpyorgfjruedqyjjbgyhlxdudeodtqaveeezkssyaxzeynylomaadyqcyngvsjxldffiyqdl",
+    "itqderqcfonmaueb",
+    "tundbyaetuzojpdatiggzyywhfjqsiqukydyxetapkxrjwsoqviurqnhnfysowgcgaomndkieqlcbblzkoxbdottd",
+    "vepeubiwfdcrfkdauh",
+    "qhlsmbqddaafenetxymfwkwexqeimefammoykgegqpvhwjsotplpnwxjnzmrncun",
+    "dawecbadflt",
+    "fanpdcdrbltudukpyedgfxmrx",
+    "qdxkbaealcflbccelphkxwwtsqjmmzasikqmyshvqczhbodkepifqwxtbidpedivceichjmanigv",
+    "faxdajrlfnngyebzfchatee",
+    "etydnmybnhmuttdqrxdyoufhtpnmilsziuqiunjcmgnwvanhqwvtasdkatgbjjixblgq",
+    "tbcenefzdqfzbyuvdicvgcvdumvzdtdvzxeekdetrxvgacrkfobuhg",
+    "zkyvrbmcbdfoluciveqwfdaspcokl",
+    "cmytbkfjytsupocateyhesgfporwcxikrlniuuwmmpinpbhulheonfdiflirabvpcxegcqqmwqbgfcddfdzswfodrkauiweeafvo",
+    "qgyzasungavrawdfelopzteekptizcmvuhjglmejdkwxuahmuuyysvcveyopkofqpanadlpzdbjyoklnenrhaacbvoj",
+    "brolcakikbdwfkvxe",
+    "wvjwcwpuvzctdkkmsbyhisxbapfhxtjbrakbnsbphzivqrmaduzzbreblcwoccdcspgweuzhpypnkextbvazfyyyrazedfbs",
+    "cpgdbfmzeekaj",
+    "iebddihfwcbcetbzajwtkdtyhacvnoojapcnwnckajtxtqqjjjcfsrk",
+    "efdcocyyanb",
+    "fkxvbituhafvbcwfqqityavdihee",
+    "fedbetmaajfcqn",
+    "ztvtfcgmdqyudszqbdurioahozohyfksnglaemoe",
+    "dbphhmjgovjofqurygwqxrpnpkvszzwzieninzzffidfisrqbpshsdfcduttqrhrxaebioacfhjityaochfbsqcmfextop",
+    "nfcaivhjsfvrmlbretjmxxcicfvazabhlhfjodlmomhodfnudxhjspgxadixcxrmeadthmvbonkwcltx",
+    "bliogsnyiqckoesmobhjfjdrrdrdanpgxhbgbnaackokymfbxvhsfycencswxzcmthfvfdyewmse",
+    "gjrzhhqgyhqibhfvapbsfzarrcdnauaiaigpoapjfzjiihrcqwjoyleettyoyzdxwipxvzxteaiossoidgxwefng",
+    "dznrpbuycjtkecgcnlelzqbedajzeqxynoapsklpjfoiaccdfbae",
+    "bjsrahfxljybyflkyxzwqdffakdycrepb",
+    "hfuixlwpadeqxgcgisbcffdzablkaaszkmtehverzsvgycxvztoodby",
+    "whrqaxnfoiliqkdduggswhgnyllwgvbtbcwcebuavkltooafprywbdxwivuoleayafjxevqcrhxhopzzbtaxfdfo",
+    "ynkcaqkedcoaurgetbpsdxxgbmahcdocbnsuftfnauyuoaabdedfgedoeplpcaknpbgbhewp",
+    "bguurjipiceundqdeefriwwchwscymuzzfqmkeptamj",
+    "dnznblaeracmf",
+    "jkwipragrynjfctmmyljxjvrampdxrulimnctdmqpblbdbuxotczepknecvgeluf",
+    "ltkwmiuxxiqidrvcfforqnestzmwvabsfwwqtfbde",
+    "bvtcgdaeef",
+    "fxznapankhvfxrlkodstiubethvlvvidlbdsoxzsatoujqecipxpteeyeiy",
+    "lsbfajqgbbwjxotfdvvrfanmiknevkhdqzauleqioqmcjtnjvpbvaxrmtkbdvswiglpccdsgnttafbsglradpaebegie",
+    "tkefjgpekxcddbhuoriaxkrusulojdcclfsmcjtnffyaudvviyeediymvhuvczhrmnszazxuilykrgaafbgdbpkulsdec",
+    "teadtbudfcjpkbecdasgoieeetgaeodbfbctkusijoffvcxd",
+    "emsybxqpgwmirtipgvctytpnwcydxocbbmzohchewevscuozmfmxhxjklswpkrkzieanpanhkspyzzqievwch",
+    "sydjefbwac",
+    "wkxjvavbqmckztqygcagictftsdtegyrixoakxvnzciwqelsxpfpngadkdaogggidllonsilzjaijpgjpjeob",
+    "orguunfyozcoxlzhrbyeliwnwajanotjaqzusjjjchfunqffdimqjxbhzpwlamuoaokajk",
+    "uxxeukfmrgdanipanqsnqvkbficdadrclbckpbqhalfloekx",
+    "bkwqjfywwejfkdkaomfxwbheyiwqsrjakwlathpxlcibshpgtkpekmgowjzlwegagbwqisgsqwuatkqabcyotwdv",
+    "vqbcibifaheknsckccnttuzayeligdks",
+    "pqrcbcaofvcftcmdottdfdoazepgvaiuvvboldzkmsu",
+    "eiygneoyhmvgjpcvbcohvbsocaksbolzbuvmdvocmyccmdqjcchdfdabxmrxyhdmsqpsodyucvgrnacpgrtduwtyuigsmae",
+    "ofmpbdmyhfzmgedccrygswcwlmjfwgmbvyfayxxtc",
+    "oewsnywgdfxvwmogrsiohdronieyvdladdvkeyfaudvcxcicnmlaacrdgoropfwbincltutqemnfsyy",
+    "ivhcbpcubhewfobtpchrztzxpiehwqavjigqdlssgtfxnbuebkpomagtqjeeyjughjorrehatg",
+    "zrjkaazaxiphifghbquwwzphgodamkcysaezuzdvqcpzwtkfclhduofamsveutxcbtafaio",
+    "cltgbyfyojchdpqokgzaupvuykqgeumojkdehmikavkmiowxjcsazvlwvw",
+    "ichlkyzdskptljfzsbfydemnkftjjyahjaqdbcjjgwdprobretrbdribdapfk",
+    "fezclofbtwansdc",
+    "prackrfzxyxhocmzssaebgtriipnascagcvjwwaqwmabecskjvbfpdygpmbgu",
+    "aecefbd",
+    "pkfopoykbrewitdkmiftenfacjojjag",
+    "bqppsapszxyhsptfckastzwzrdihwricepzsbbfrirujkqgjbiuafrbvpmwfau",
+    "thkxanyzdazfqoconysebxnf",
+    "fvgljqbsxopfeaeccqkvfpbbyqzevljjdrfveshcsbfgttsbchdszmhbztgtnxxhkxcaadjkwxlobsbtjuuyeuqcs",
+    "lkuravcjvwrkjhzjhxhnrmfbsfdebskgbybxoataopobavjahoolvtqymnnfnjl",
+    "frppvxthytwcwkmumstqqztykwmdjlspjavihdfebqvbgqubazszqwelblrrhxdbcwldhscavxbg",
+    "wldpczzyngffbpsbmdicpuqaplxfgptjtspmqvwywynmxdvgslaiiabcrjnigjnzreohkatblpkhddkuwzfbhjxxqhoajh",
+    "dvgshpkfncezmlhlnnhcyyudtumredygxywvrlodejzxjpbeuzzqgakfjlfdtkshtrqpyrgzphkpvsehqbba",
+    "jgbscqkwykjefwxmqcdqfdzmdqweklcefzjwfawqhfmayhaunbeksryynxeiuym",
+    "ncfkvioekdnsabctxi",
+    "bcoezrxhcezfebdgrvmkawebqrfwmbhtryoeoplvzzscnbvlpi",
+    "uvtmlxytzcofsfejjwnaqvoxymoaegaemlbunjdidpzknndyweqpbeivzmzdpbvy",
+    "oijhpvpoaerahmjccnhacdaleewwfpsjvyuxpeomjccxeednbhkopmxxbhvuedkwpfxyjqnxwynqkwkhyyy",
+    "jyvdtokeyyqgbkxzdjhhdoggalewmqburzeaotqgoxpswkawcmvzufltnsslyyacbldbzzwsgbefufu",
+    "enzlvplxqotjafixlgorvcdqifnotkeyadutmpkasxqyfvelnyqdwkagdeqlhrab",
+    "ymnyaftenfppwmizdzfbjcywljagzmvcuuffrdppzracuvgdtedhosdvweivbhtob",
+    "errdfjooqcguagradqkgxtkqbpjxxyqnhvwszkmuxjncjejg",
+    "fuebpkcad",
+    "opdbnrjqcgigfbmuzdcdpdraoextgrc",
+    "foddwyjlkfsbscauzaetu",
+    "alttoevdudknudqjcqyimpvcrozhftbbemualsrwgcojbpehhfpaorzatbadwrszapilpzt",
+    "noaygksfosrpglmglkzbklxjdnqtjhatpsqqcgoiohrwqdfzpaaerhchlcnkohtrnheyxcpehrz"
+    };
 
     //test array fill
-    _strcopy(s, inputedStrings[0]);
-    _strcopy(s1, inputedStrings[1]);
-    _strcopy(s2, inputedStrings[2]);
+    //_strcopy(s, inputedStrings[0]);
+    //_strcopy(s1, inputedStrings[1]);
+    //_strcopy(s2, inputedStrings[2]);
 
 
     //****************************************test is array filled correctly
@@ -116,13 +217,18 @@ int main()
     }
     */
 
-    char controlString[_strlen(inputedStrings[0])];
-    _strcopy(inputedStrings[0], controlString);
+    char controlString[ALPHABET_LENGTH];
+
+    for(int i = 0; i < ALPHABET_LENGTH; i++)
+    {
+        controlString[i] = i + 97;
+    }
+
 
 
     for(int i = 0; i < t; i++)
     {
-        for(int j = 0; j < _strlen(inputedStrings[0]); j++)
+        for(int j = 0; j < ALPHABET_LENGTH; j++)
         {
             if(indexOf(inputedStrings[i], controlString[j]) != -1)
             {
@@ -131,12 +237,12 @@ int main()
         }
     }
 
-    /*
+
     for(int i = 0; i < ALPHABET_LENGTH; i++)
     {
         printf("%i - %c - %i\n", i + 1, i + SMALL_A_ACII_INDEX, charMarkers[i]);
     }
-    */
+
 
     int totalCounter = 0;
 
