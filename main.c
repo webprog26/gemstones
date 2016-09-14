@@ -55,7 +55,7 @@ int main()
 
     char userString[MAXLENGTH];
 
-    char inputedStrings[t];
+    char inputedStrings[t][MAXLENGTH];
 
     for(int i = 0; i < t; i++)
     {
@@ -92,12 +92,6 @@ int main()
             }
         }
     }
-
-    for(int i = 0; i < ALPHABET_LENGTH; i++)
-    {
-        printf("%i - %c - %i\n", i + 1, i + SMALL_A_ACII_INDEX, charMarkers[i]);
-    }
-
 
     int totalCounter = 0;
 
