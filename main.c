@@ -3,6 +3,23 @@
 
 #define MAXLENGTH 100
 
+int indexOf(char* s, char c)
+{
+    char* sp = s;
+
+    int flag = -1;
+
+    while(*s)
+    {
+        if(*s == c)
+        {
+            flag = s - sp;
+            return flag;
+        }
+        s++;
+    }
+    return flag;
+}
 
 void _strcopy(char* from, char* to)
 {
@@ -87,15 +104,17 @@ int main()
     }
 
     //****************************************test is charMarkers filled correctly
-
+    /*
     for(int i = 0; i < controlLength; i++)
     {
         printf("%i\n", charMarkers[i]);
     }
-
-
+    */
 
     _strcopy(inputedStrings[0], controlString);
+
+
+
 
     //****************************************test is string copied correctly
     /*
